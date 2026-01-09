@@ -122,15 +122,23 @@ body {
         aspect-ratio: 1080/1670; /* Mantiene proporción */
     }
     
+    /* ===== SECCIÓN 2: fondo2.png (TRANSPARENTE Y SUPERPUESTA) ===== */
     .seccion-2 {
-        width: 100%; /* Se ajusta al ancho del móvil */
-        max-width: 900px;
-        height: auto;
-        aspect-ratio: 900/1296; /* Mantiene proporción */
-        top: auto;
-        position: relative;
-        margin: -200px auto 0; /* Se superpone negativamente */
+        position: absolute; /* Flotante sobre fondo1.jpg */
+        top: 800px; /* ¡CAMBIADO! Empieza a la mitad de fondo1.jpg */
+        left: 50%;
         transform: translateX(-50%);
+        width: 100%;
+        max-width: 1080px;
+        height: 1555px; /* Tu nueva medida: 1080 x 1555 */
+        background-image: url('imagenes/fondo2.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent !important; /* ¡TRANSPARENTE! */
+        z-index: 20; /* Más alto para estar por encima */
+        pointer-events: none; /* No interfiere con clicks */
+        opacity: 1; /* Asegurar que sea visible */
     }
     
     .invitacion {
