@@ -32,11 +32,14 @@ body {
     display: block;
     margin: 0;
     padding: 0;
+
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
 }
 
 /* ===== SECCIÓN 1: fondo1.jpg ===== */
 .seccion-1 {
-    height: 2690px; /* Alto de la imagen 1 */
     background-image: url('imagenes/fondo1.jpg');
     background-size: 100% auto;
     background-position: top center;
@@ -45,7 +48,6 @@ body {
 
 /* ===== SECCIÓN 2: fondo2.jpg ===== */
 .seccion-2 {
-    height: 735px; /* Mismo alto que imagen 2 */
     background-image: url('imagenes/fondo2.jpg');
     background-size: 100% auto;
     background-position: top center;
@@ -54,7 +56,6 @@ body {
 
 /* ===== SECCIÓN 3: fondo3.jpg ===== */
 .seccion-3 {
-    height: 1658px; /* Mismo alto que imagen 3*/
     background-image: url('imagenes/fondo3.jpg');
     background-size: 100% auto;
     background-position: top center;
@@ -63,7 +64,6 @@ body {
 
 /* ===== SECCIÓN 4: fondo4.jpg ===== */
 .seccion-4 {
-    height: 1479px; /* Mismo alto que imagen 4 */
     background-image: url('imagenes/fondo4.jpg');
     background-size: 100% auto;
     background-position: top center;
@@ -72,7 +72,6 @@ body {
 
 /* ===== SECCIÓN 5: fondo5.jpg ===== */
 .seccion-5 {
-    height: 2149px; /* Mismo alto que imagen 5 */
     background-image: url('imagenes/fondo5.jpg');
     background-size: 100% auto;
     background-position: top center;
