@@ -1,86 +1,63 @@
-/* ===== RESET BÁSICO ===== */
+/* ===== RESET TOTAL ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: #ffffff;
+/* Evita espacios fantasma */
+html, body {
+    width: 100%;
     overflow-x: hidden;
-    line-height: 0;
+    background: #ffffff;
 }
 
-/* ===== CONTENEDOR PRINCIPAL ===== */
+/* ===== CONTENEDOR ===== */
 .invitacion {
     width: 100%;
     max-width: 1080px;
     margin: 0 auto;
-    position: relative;
-    line-height: normal;
 }
 
-/* ===== ESTILOS PARA TODAS LAS SECCIONES ===== */
+/* ===== SECCIONES ===== */
 .seccion {
     width: 100%;
-    position: relative;
     display: block;
-    margin: 0;
-    padding: 0;
-
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: contain;
+    background-size: cover; /* IMPORTANTE */
 }
 
-/* ===== SECCIÓN 1: fondo1.jpg ===== */
+/* ===== CADA IMAGEN ===== */
 .seccion-1 {
+    height: 2690px;
     background-image: url('imagenes/fondo1.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
 }
 
-/* ===== SECCIÓN 2: fondo2.jpg ===== */
 .seccion-2 {
+    height: 735px;
     background-image: url('imagenes/fondo2.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
 }
 
-/* ===== SECCIÓN 3: fondo3.jpg ===== */
 .seccion-3 {
+    height: 1658px;
     background-image: url('imagenes/fondo3.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
 }
 
-/* ===== SECCIÓN 4: fondo4.jpg ===== */
 .seccion-4 {
+    height: 1479px;
     background-image: url('imagenes/fondo4.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
 }
 
-/* ===== SECCIÓN 5: fondo5.jpg ===== */
 .seccion-5 {
+    height: 2149px;
     background-image: url('imagenes/fondo5.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
 }
 
 .seccion + .seccion {
     margin-top: 0;
 }
+
 
 /* ===== BOTONES FLOTANTES ===== */
 .botones-fijos {
