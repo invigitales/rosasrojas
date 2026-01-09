@@ -135,7 +135,6 @@ body {
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        background-color: transparent !important; /* ¡TRANSPARENTE! */
         z-index: 20; /* Más alto para estar por encima */
         pointer-events: none; /* No interfiere con clicks */
         opacity: 1; /* Asegurar que sea visible */
