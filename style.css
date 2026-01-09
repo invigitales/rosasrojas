@@ -54,10 +54,6 @@ html, body {
     background-image: url('imagenes/fondo5.jpg');
 }
 
-.seccion + .seccion {
-    margin-top: 0;
-}
-
 
 /* ===== BOTONES FLOTANTES ===== */
 .botones-fijos {
@@ -95,21 +91,5 @@ html, body {
     
     .invitacion {
         max-width: 100%;
-    }
-}
-
-/* Para pantallas muy pequeñas */
-@media (max-width: 480px) {
-    .seccion-2 {
-        margin-top: -100px;
-        width: 100%;
-    }
-    
-    .btn-musica {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-        bottom: 20px;
-        right: 20px;
     }
 }
