@@ -10,10 +10,9 @@ html {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background: #ffffff;
     overflow-x: hidden;
-    line-height: 0;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
@@ -22,10 +21,9 @@ body {
     max-width: 1080px;
     margin: 0 auto;
     position: relative;
-    line-height: normal;
 }
 
-/* ===== ESTILOS PARA TODAS LAS SECCIONES ===== */
+/* ===== ESTILOS BASE PARA TODAS LAS SECCIONES ===== */
 .seccion {
     width: 100%;
     position: relative;
@@ -38,51 +36,45 @@ body {
     background-size: contain;
 }
 
-/* ===== SECCIÓN 1: fondo1.jpg ===== */
+/* Truco de proporción automática */
+.seccion::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: var(--alto);
+}
+
+/* ===== SECCIÓN 1 ===== */
 .seccion-1 {
     background-image: url('imagenes/fondo1.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
+    --alto: 249%;   /* 2690 / 1080 */
 }
 
-/* ===== SECCIÓN 2: fondo2.jpg ===== */
+/* ===== SECCIÓN 2 ===== */
 .seccion-2 {
     background-image: url('imagenes/fondo2.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
+    --alto: 68%;    /* 735 / 1080 */
 }
 
-/* ===== SECCIÓN 3: fondo3.jpg ===== */
+/* ===== SECCIÓN 3 ===== */
 .seccion-3 {
     background-image: url('imagenes/fondo3.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
+    --alto: 153%;   /* 1658 / 1080 */
 }
 
-/* ===== SECCIÓN 4: fondo4.jpg ===== */
+/* ===== SECCIÓN 4 ===== */
 .seccion-4 {
     background-image: url('imagenes/fondo4.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
+    --alto: 137%;   /* 1479 / 1080 */
 }
 
-/* ===== SECCIÓN 5: fondo5.jpg ===== */
+/* ===== SECCIÓN 5 ===== */
 .seccion-5 {
     background-image: url('imagenes/fondo5.jpg');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
+    --alto: 199%;   /* 2149 / 1080 */
 }
 
-.seccion + .seccion {
-    margin-top: 0;
-}
-
-/* ===== BOTONES FLOTANTES ===== */
+/* ===== BOTÓN FLOTANTE ===== */
 .botones-fijos {
     position: fixed;
     bottom: 30px;
@@ -100,34 +92,10 @@ body {
     font-size: 24px;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
 }
 
-.btn-musica:hover {
-    transform: scale(1.1);
-    background: rgba(200, 155, 60, 1);
-}
-
-/* ===== RESPONSIVE PARA MÓVILES ===== */
-@media (max-width: 1080px) {
-    .seccion-1,
-    .seccion-3,
-    .seccion-4,
-    .seccion-5,
-    .seccion-2,
-    
-    .invitacion {
-        max-width: 100%;
-    }
-}
-
-/* Para pantallas muy pequeñas */
+/* Ajuste móvil */
 @media (max-width: 480px) {
-    .seccion-2 {
-        margin-top: -100px;
-        width: 100%;
-    }
-    
     .btn-musica {
         width: 50px;
         height: 50px;
