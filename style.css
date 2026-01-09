@@ -131,7 +131,6 @@ body {
         position: relative;
         margin: -200px auto 0; /* Se superpone negativamente */
         transform: translateX(-50%);
-        background-color: white !important;
     }
     
     .invitacion {
@@ -153,4 +152,16 @@ body {
         bottom: 20px;
         right: 20px;
     }
+}
+
+
+/* Fondo blanco superpuesto */
+.fondo-blanco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1; /* Detrás de la imagen */
 }
