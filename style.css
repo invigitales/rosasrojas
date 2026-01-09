@@ -32,28 +32,20 @@ body {
 
 /* ===== SECCIÓN 1: fondo1.jpg ===== */
 .seccion-1 {
-    height: 1670px; /* Mismo alto que tu imagen */
+    height: 2690px; /* Alto de la imagen 1 */
     background-image: url('imagenes/fondo1.jpg');
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
-    background-color: #000; /* Fondo negro por si acaso */
 }
 
-/* ===== SECCIÓN 2: fondo2.png (SUPERPUESTA) ===== */
+/* ===== SECCIÓN 2: fondo2.jpg ===== */
 .seccion-2 {
-    position: absolute; /* ¡IMPORTANTE! Esto la hace flotar */
-    top: 1400px; /* Empieza antes de que termine fondo1 */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 900px; /* Ancho de tu imagen */
-    height: 1296px; /* Alto de tu imagen */
-    background-image: url('imagenes/fondo2.png');
-    background-size: contain;
-    background-position: center;
+    height: 735px; /* Mismo alto que imagen 2 */
+    background-image: url('imagenes/fondo2.jpg');
+    background-size: 100% auto;
+    background-position: top center;
     background-repeat: no-repeat;
-    z-index: 10; /* Por encima de las demás */
-    pointer-events: none; /* No interfiere con clicks */
 }
 
 /* ===== SECCIÓN 3: fondo3.jpg ===== */
@@ -63,7 +55,6 @@ body {
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
-    margin-top: 100px; /* Espacio para fondo2 */
 }
 
 /* ===== SECCIÓN 4: fondo4.jpg ===== */
@@ -115,30 +106,8 @@ body {
     .seccion-1,
     .seccion-3,
     .seccion-4,
-    .seccion-5 {
-        background-size: cover; /* Cambia para móviles */
-        height: auto;
-        min-height: 100vh; /* Ocupa al menos toda la pantalla */
-        aspect-ratio: 1080/1670; /* Mantiene proporción */
-    }
-    
-    /* ===== SECCIÓN 2: fondo2.png (TRANSPARENTE Y SUPERPUESTA) ===== */
-    .seccion-2 {
-        position: absolute; /* Flotante sobre fondo1.jpg */
-        top: 800px; /* ¡CAMBIADO! Empieza a la mitad de fondo1.jpg */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 1080px;
-        height: 1555px; /* Tu nueva medida: 1080 x 1555 */
-        background-image: url('imagenes/fondo2.png');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        z-index: 20; /* Más alto para estar por encima */
-        pointer-events: none; /* No interfiere con clicks */
-        opacity: 1; /* Asegurar que sea visible */
-    }
+    .seccion-5,
+    .seccion-2,
     
     .invitacion {
         max-width: 100%;
