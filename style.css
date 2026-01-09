@@ -5,40 +5,49 @@
     box-sizing: border-box;
 }
 
-body, html {
-    width: 100%;
-    background-color: #ffffff; /* O el color de tu fondo */
-    overflow-x: hidden;
-    /* Elimina espacios entre elementos inline */
-    line-height: 0; 
+/* 2. FUENTE PERSONALIZADA MIGROSKA */
+@font-face {
+    font-family: 'Migroska';
+    src: url('fuentes/migroska.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Mejora la experiencia de carga */
 }
 
-/* 2. CONTENEDOR */
+body, html {
+    width: 100%;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    line-height: 0;
+    font-family: 'Migroska', 'Georgia', serif; /* Fallback a Georgia si Migroska no carga */
+}
+
+/* 3. CONTENEDOR */
 .invitacion {
     width: 100%;
-    max-width: 1080px; /* Tu ancho base */
+    max-width: 1080px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-/* 3. SECCIONES e IMÁGENES */
+/* 4. SECCIONES e IMÁGENES */
 .seccion {
     width: 100%;
-    position: relative; /* Para cuando pongas botones encima */
-    line-height: 0;     /* Refuerza que no haya espacio abajo */
+    position: relative;
+    line-height: 0;
     display: block;
 }
 
 .img-boda {
-    width: 100%;        /* Se ajusta al ancho del celular */
-    height: auto;       /* La altura se calcula sola para no dejar huecos */
-    display: block;     /* Quita el margen inferior por defecto de las imágenes */
+    width: 100%;
+    height: auto;
+    display: block;
     border: none;
     outline: none;
 }
 
-/* 4. BOTONES (Ejemplo básico) */
+/* 5. BOTONES */
 .botones-fijos {
     position: fixed;
     bottom: 20px;
@@ -54,11 +63,11 @@ body, html {
     background: rgba(255,255,255,0.8);
     font-size: 20px;
     cursor: pointer;
-    line-height: 1; /* Para centrar el emoji */
+    line-height: 1;
+    font-family: inherit; /* Hereda la fuente del body */
 }
 
-
-/* 5. ESTILOS PARA TEXTO SOBRE IMÁGENES */
+/* 6. ESTILOS PARA TEXTO SOBRE IMÁGENES */
 .contenedor-texto {
     position: absolute;
     top: 0;
@@ -72,67 +81,92 @@ body, html {
     z-index: 2;
     text-align: center;
     padding: 20px;
-    pointer-events: none; /* Permite hacer clic en la imagen */
+    pointer-events: none;
 }
 
 .texto-superior {
     color: white;
-    font-size: clamp(24px, 6vw, 48px);
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    font-size: clamp(26px, 6.5vw, 52px);
+    font-family: 'Migroska', 'Georgia', serif;
+    font-weight: normal; /* Migroska podría no tener pesos bold, usa normal */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase; /* Para un look más elegante */
 }
 
 .texto-fecha {
     color: white;
-    font-size: clamp(18px, 4vw, 32px);
-    font-family: 'Arial', sans-serif;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    margin-bottom: 30px;
-    letter-spacing: 2px;
+    font-size: clamp(20px, 4.5vw, 36px);
+    font-family: 'Migroska', 'Georgia', serif;
+    font-weight: normal;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+    letter-spacing: 3px;
 }
 
 .texto-nombres {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .nombre {
     color: white;
-    font-size: clamp(28px, 7vw, 56px);
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-    letter-spacing: 1px;
+    font-size: clamp(32px, 8vw, 64px);
+    font-family: 'Migroska', 'Georgia', serif;
+    font-weight: normal;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .ampersand {
     color: white;
-    font-size: clamp(40px, 10vw, 80px); /* Más grande que los nombres */
-    font-family: 'Georgia', serif;
+    font-size: clamp(48px, 12vw, 96px); /* Más grande que los nombres */
+    font-family: 'Migroska', 'Georgia', serif;
     font-weight: normal;
-    opacity: 0.4; /* 40% de opacidad */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    line-height: 1;
+    opacity: 0.4; /* 40% de opacidad como pediste */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    line-height: 0.8;
+    margin: 0 5px;
 }
 
-/* Media queries para ajustes responsivos */
+/* 7. AJUSTES ESPECÍFICOS PARA MEJOR VISUALIZACIÓN CON MIGROSKA */
+/* Si la fuente Migroska es muy delgada, podemos añadir efectos para mejorar legibilidad */
+.texto-superior,
+.texto-fecha,
+.nombre {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Ajuste para el & con opacidad */
+.ampersand {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3)); /* Refuerza visibilidad */
+}
+
+/* 8. Media queries para ajustes responsivos */
 @media (max-width: 768px) {
     .contenedor-texto {
         padding: 15px;
     }
     
     .texto-fecha {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
     }
     
     .texto-nombres {
-        gap: 10px;
+        gap: 12px;
+    }
+    
+    .ampersand {
+        margin: 0 3px;
     }
 }
 
@@ -141,11 +175,50 @@ body, html {
         padding: 10px;
     }
     
+    .texto-superior {
+        margin-bottom: 10px;
+        letter-spacing: 1.5px;
+    }
+    
     .texto-fecha {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+        letter-spacing: 1.5px;
     }
     
     .texto-nombres {
         gap: 8px;
+    }
+    
+    .nombre {
+        letter-spacing: 1px;
+    }
+    
+    .ampersand {
+        line-height: 0.7;
+    }
+}
+
+/* 9. Ajuste para orientación horizontal en móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+    .contenedor-texto {
+        padding: 10px;
+    }
+    
+    .texto-superior {
+        font-size: clamp(20px, 4vw, 32px);
+        margin-bottom: 5px;
+    }
+    
+    .texto-fecha {
+        font-size: clamp(16px, 3vw, 24px);
+        margin-bottom: 15px;
+    }
+    
+    .nombre {
+        font-size: clamp(24px, 5vw, 40px);
+    }
+    
+    .ampersand {
+        font-size: clamp(32px, 7vw, 56px);
     }
 }
