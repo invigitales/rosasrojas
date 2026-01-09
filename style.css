@@ -131,6 +131,7 @@ body {
         position: relative;
         margin: -200px auto 0; /* Se superpone negativamente */
         transform: translateX(-50%);
+        background-color: white !important;
     }
     
     .invitacion {
