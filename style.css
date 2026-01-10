@@ -167,3 +167,14 @@ body, html {
     height: auto;
     display: block;
 }
+
+/* Botón sobrepuesto 2 */
+.btn-sobrepuesto2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    display: block;
+    z-index: 10;
+}
