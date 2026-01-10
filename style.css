@@ -178,3 +178,9 @@ body, html {
     display: block;
     z-index: 10;
 }
+
+.btn-sobrepuesto2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
