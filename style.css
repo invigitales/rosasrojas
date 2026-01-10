@@ -149,3 +149,21 @@ body, html {
         gap: 8px;
     }
 }
+
+
+/* Botón sobrepuesto */
+.btn-sobrepuesto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    display: block;
+    z-index: 10;
+}
+
+.btn-sobrepuesto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
